@@ -2,7 +2,9 @@ def gitUrl = 'https://github.com/michaelarichard/jenkins_dsl.git'
 
 job('seed-job') {
     scm {
-        git(gitUrl)
+        git(gitUrl){
+	    createTag('false')
+	}
     }
     triggers {
         scm('* * * * *')
