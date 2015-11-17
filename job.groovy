@@ -1,7 +1,7 @@
 job('seed-job') {
     scm {
          remote {
-              url 'https://github.com/michaelarichard/jenkins_dsl.git'
+              url('https://github.com/michaelarichard/jenkins_dsl.git')
          }
     }
     triggers {
