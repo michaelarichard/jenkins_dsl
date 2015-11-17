@@ -1,8 +1,9 @@
+def gitURL = 'https://github.com/michaelarichard/jenkins_dsl.git'
 job('seed-job') {
     scm {
       git{
            remote {
-              url('https://github.com/michaelarichard/jenkins_dsl.git')
+              url(gitUrl)
            }
 	 }
     }
