@@ -1,6 +1,6 @@
 def gitUrl = 'https://github.com/michaelarichard/jenkins_dsl.git'
 
-job('any_change') {
+job('seed-job') {
     scm {
         git(gitUrl)
     }
@@ -8,6 +8,10 @@ job('any_change') {
         scm('* * * * *')
     }
     steps {
-        shell('echo "a change occurred."')
+        dsl {
+            text(readFileFromWorkspace('job.groovy'))
+            removeAction('DELETE')
+            removeViewAction('DELETE')
+        }
     }
 }
