@@ -3,7 +3,7 @@ job('seed-job') {
     scm {
       git{
            remote {
-              url(gitUrl)
+              url(gitURL)
            }
 	 }
     }
