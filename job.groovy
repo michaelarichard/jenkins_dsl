@@ -9,9 +9,10 @@ job('seed-job') {
     }
     steps {
         dsl {
-            text(readFileFromWorkspace('job.groovy'))
-            removeAction('DELETE')
-            removeViewAction('DELETE')
+//            text(readFileFromWorkspace('job.groovy'))
+	      external('job.groovy')
+//            removeAction('DELETE')
+//            removeViewAction('DELETE')
         }
     }
 }
