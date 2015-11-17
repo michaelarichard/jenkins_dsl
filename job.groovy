@@ -1,10 +1,8 @@
-def gitUrl = 'https://github.com/michaelarichard/jenkins_dsl.git'
-
 job('seed-job') {
     scm {
-        git(gitUrl){
-	    createTag('false')
-	}
+         remote {
+              url 'https://github.com/michaelarichard/jenkins_dsl.git'
+         }
     }
     triggers {
         scm('* * * * *')
