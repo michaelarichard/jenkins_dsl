@@ -12,7 +12,7 @@ job('job1') {
     }
     steps {
         dsl {
-            text(readFileFromWorkspace('job/job1/job.sh'))
+            text(readFileFromWorkspace('jobs/job1/job.sh'))
 //	      external('job.groovy')
 //            removeAction('DELETE')
 //            removeViewAction('DELETE')
@@ -20,5 +20,4 @@ job('job1') {
     }
 }
 
-evaluate(new File("../jobs/job1.groovy"))
 
