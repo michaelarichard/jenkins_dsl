@@ -13,7 +13,7 @@ job('seed-job') {
     steps {
         dsl {
 //            text(readFileFromWorkspace('job.groovy'))
-	    external('**/job.groovy','**/view.groovy')
+	    external('**/job.groovy','**/view.groovy','**/**/job.groovy')
 
 // PURGE OPTIONS, FALSE by DEFAULT	    
 //            removeAction('DELETE')

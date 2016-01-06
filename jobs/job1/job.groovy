@@ -12,7 +12,7 @@ job('job1') {
     }
     steps {
         dsl {
-            text(readFileFromWorkspace('job1/job.sh'))
+            text(readFileFromWorkspace('job/job1/job.sh'))
 //	      external('job.groovy')
 //            removeAction('DELETE')
 //            removeViewAction('DELETE')
