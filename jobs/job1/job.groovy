@@ -1,5 +1,5 @@
-def gitURL = 'https://github.com/michaelarichard/jenkins_dsl.git'
-job('seed-job') {
+def gitURL = 'https://gitlab.amer.gettywan.com/ts_playground/jenkins_dsl.git'
+job('job1') {
     scm {
       git{
            remote {
@@ -12,12 +12,13 @@ job('seed-job') {
     }
     steps {
         dsl {
-//            text(readFileFromWorkspace('job.groovy'))
-	    external('**/job.groovy','**/view.groovy')
-
-// PURGE OPTIONS, FALSE by DEFAULT	    
+            text(readFileFromWorkspace('job1/job.sh'))
+//	      external('job.groovy')
 //            removeAction('DELETE')
 //            removeViewAction('DELETE')
         }
     }
 }
+
+evaluate(new File("../jobs/job1.groovy"))
+
