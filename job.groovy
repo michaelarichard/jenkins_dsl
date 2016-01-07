@@ -1,4 +1,4 @@
-def gitURL = 'https://github.com/michaelarichard/jenkins_dsl.git'
+def gitURL = 'file:///repos/michaelarichard/jenkins_dsl.git'
 job('seed-job') {
     scm {
       git{
