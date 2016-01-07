@@ -11,13 +11,6 @@ job('job1') {
         scm('* * * * *')
     }
     steps {
-        dsl {
-            text(readFileFromWorkspace('jobs/job1/job.sh'))
-//	      external('job.groovy')
-//            removeAction('DELETE')
-//            removeViewAction('DELETE')
-        }
+        shell(readFileFromWorkspace('jobs/job1/job.sh'))
     }
 }
-
-
