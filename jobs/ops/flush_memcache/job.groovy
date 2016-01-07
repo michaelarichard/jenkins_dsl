@@ -3,7 +3,7 @@ job('flush_memcache') {
     }
     steps {
         dsl {
-            text(readFileFromWorkspace('ops/flush_memcache/job.sh'))
+            text(readFileFromWorkspace('jobs/ops/flush_memcache/job.sh'))
         }
     }
 }
